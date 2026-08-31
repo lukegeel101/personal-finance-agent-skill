@@ -83,3 +83,9 @@ Verified fix: read the file explicitly and pass its contents to `YAML.safe_load`
 Issue: one final verification command used the outdated filename `scripts/run_demo_audit.py`, which does not exist in the release repository.
 
 Verified fix: confirm the documented entry point in the repository, run `scripts/demo_audit.py`, and verify its fictional audit output before running the complete test suite.
+
+## Use the supported repository view output
+
+Issue: `gh-axi repo view` does not support the GitHub CLI `--json` flag, so the first remote visibility check was rejected.
+
+Verified fix: inspect the command help, run the supported repository view command without that flag, and confirm that the repository reports `visibility: private` and `branch: main`.
