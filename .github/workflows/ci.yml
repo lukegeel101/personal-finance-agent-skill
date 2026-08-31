@@ -1,0 +1,33 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validation:
+    name: Validation
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.11"
+
+      - name: Validate public workspace
+        run: python3 scripts/validate_workspace.py
+
+      - name: Run mock audit
+        run: python3 scripts/demo_audit.py
+
+      - name: Run tests
+        run: python3 -m unittest discover -s tests -v

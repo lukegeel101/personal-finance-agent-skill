@@ -5,7 +5,7 @@
   <p>
     <img src="https://img.shields.io/badge/default-read%20only-4f46e5?style=for-the-badge" alt="Read only by default">
     <img src="https://img.shields.io/badge/works%20with-ChatGPT%20%2B%20Claude-7c3aed?style=for-the-badge" alt="Works with ChatGPT and Claude">
-    <img src="https://img.shields.io/badge/tests-9%20passing-0891b2?style=for-the-badge" alt="Nine passing tests">
+    <a href="https://github.com/lukegeel101/personal-finance-agent-skill/actions/workflows/ci.yml"><img src="https://github.com/lukegeel101/personal-finance-agent-skill/actions/workflows/ci.yml/badge.svg" alt="CI status"></a>
   </p>
 </div>
 

@@ -95,3 +95,27 @@ Verified fix: inspect the command help, run the supported repository view comman
 Issue: the wide 1200 by 360 README hero crops poorly when reused directly as GitHub's approximately 2:1 social preview.
 
 Verified fix: render a separate 1280 by 640 PNG from a converter-stable SVG copy, replace unsupported gradients with matching solid palette colors, preserve the full hero inside a matching background, and visually verify the result before upload.
+
+## Fall back cleanly when the GitHub wrapper cache is unavailable
+
+Issue: `npx -y gh-axi` could not start because the local npm cache contained root-owned temporary files.
+
+Verified fix: use the already authenticated `gh` CLI for the same narrowly scoped GitHub operations, and verify each remote result through GitHub's API.
+
+## Verify current action versions with network access
+
+Issue: the first action-version lookup could not reach GitHub from the restricted environment.
+
+Verified fix: grant network access for the GitHub task, query the official action repositories, and pin the workflow to the current `actions/checkout@v7` and `actions/setup-python@v7` major versions.
+
+## Use explicit percentage coordinates for social-card gradients
+
+Issue: ImageMagick interpreted unitless SVG gradient endpoints differently and rendered the first social-preview background nearly black.
+
+Verified fix: replace conversion-sensitive gradient fills with calibrated solid brand colors, render the PNG again, and visually inspect the final 1280 by 640 asset.
+
+## Preserve concurrent public-presentation improvements
+
+Issue: the remote repository gained a presentation commit while the local CI and social-preview commit was being prepared, so the first push was correctly rejected and the rebase found overlapping social assets.
+
+Verified fix: fetch and inspect the remote commit, retain its README copy and cross-repository links, keep the newer 1280 by 640 social card, combine both gotcha records, rerun validation, and only then push the integrated history.
