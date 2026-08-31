@@ -119,3 +119,9 @@ Verified fix: replace conversion-sensitive gradient fills with calibrated solid 
 Issue: the remote repository gained a presentation commit while the local CI and social-preview commit was being prepared, so the first push was correctly rejected and the rebase found overlapping social assets.
 
 Verified fix: fetch and inspect the remote commit, retain its README copy and cross-repository links, keep the newer 1280 by 640 social card, combine both gotcha records, rerun validation, and only then push the integrated history.
+
+## Use fields supported by the installed release client
+
+Issue: the installed GitHub CLI does not expose an `isLatest` field through `gh release view --json`, so the first release-verification query was rejected.
+
+Verified fix: query the supported tag, draft, prerelease, immutability, publication-time, target, and URL fields, then confirm that `v0.1.0` is a published non-draft release.
