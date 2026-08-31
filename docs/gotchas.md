@@ -53,3 +53,9 @@ Verified fix: rerun the checks with repository paths relative to the actual curr
 Issue: the first GitHub identity check produced no output inside the restricted network environment.
 
 Verified fix: rerun the narrow GitHub command with approved network access, verify the active account, create the repository as private, push `main`, and read back the private visibility setting.
+
+## Inspect ZIP archives one at a time
+
+Issue: `zipinfo` treats a second archive argument as a filename pattern inside the first archive rather than as another archive to inspect.
+
+Verified fix: inspect each archive in a separate command and confirm that neither contains `.git` metadata.
