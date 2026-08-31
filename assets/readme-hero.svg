@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title description">
+  <title id="title">Personal Finance Control Center</title>
+  <desc id="description">A dark blue finance dashboard with colorful budget, recurring charge, savings, and evidence cards.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="0.48" stop-color="#312e81"/>
+      <stop offset="1" stop-color="#7c3aed"/>
+    </linearGradient>
+    <linearGradient id="chart" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#22d3ee"/>
+      <stop offset="1" stop-color="#a3e635"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#020617" flood-opacity="0.32"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="360" rx="28" fill="url(#background)"/>
+  <circle cx="1090" cy="24" r="170" fill="#ffffff" opacity="0.05"/>
+  <circle cx="1160" cy="340" r="220" fill="#22d3ee" opacity="0.05"/>
+  <circle cx="90" cy="350" r="150" fill="#a3e635" opacity="0.05"/>
+
+  <g transform="translate(68 70)">
+    <text x="0" y="42" fill="#c4b5fd" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" letter-spacing="2">ONE SOURCE OF TRUTH FOR YOUR MONEY</text>
+    <text x="0" y="104" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="48" font-weight="800">Personal Finance Control Center</text>
+    <text x="0" y="148" fill="#e0e7ff" font-family="Arial, Helvetica, sans-serif" font-size="23">Find recurring costs, clean up spending, and plan the next smart move.</text>
+
+    <g transform="translate(0 188)" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700">
+      <rect width="132" height="44" rx="22" fill="#ffffff" opacity="0.14"/>
+      <text x="22" y="28" fill="#ffffff">Budgets</text>
+      <g transform="translate(146 0)">
+        <rect width="196" height="44" rx="22" fill="#ffffff" opacity="0.14"/>
+        <text x="22" y="28" fill="#ffffff">Recurring charges</text>
+      </g>
+      <g transform="translate(356 0)">
+        <rect width="176" height="44" rx="22" fill="#ffffff" opacity="0.14"/>
+        <text x="22" y="28" fill="#ffffff">Approval gates</text>
+      </g>
+    </g>
+  </g>
+
+  <g transform="translate(812 48)" filter="url(#shadow)">
+    <rect width="320" height="264" rx="24" fill="#ffffff" fill-opacity="0.96"/>
+    <text x="28" y="40" fill="#1e1b4b" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="800">MONTHLY SNAPSHOT</text>
+    <text x="28" y="82" fill="#64748b" font-family="Arial, Helvetica, sans-serif" font-size="14">Spending after transfers</text>
+    <text x="28" y="116" fill="#0f172a" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="800">$2,184</text>
+    <g transform="translate(28 144)">
+      <rect x="0" y="54" width="34" height="38" rx="8" fill="#c4b5fd"/>
+      <rect x="48" y="32" width="34" height="60" rx="8" fill="#818cf8"/>
+      <rect x="96" y="46" width="34" height="46" rx="8" fill="#38bdf8"/>
+      <rect x="144" y="12" width="34" height="80" rx="8" fill="url(#chart)"/>
+      <rect x="192" y="24" width="34" height="68" rx="8" fill="#a3e635"/>
+    </g>
+    <path d="M30 248h260" stroke="#e2e8f0" stroke-width="2"/>
+  </g>
+
+  <g font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#0f172a" filter="url(#shadow)">
+    <g transform="translate(744 28)">
+      <rect width="176" height="46" rx="14" fill="#ffffff"/>
+      <circle cx="24" cy="23" r="9" fill="#a3e635"/>
+      <text x="42" y="28">3 charges found</text>
+    </g>
+    <g transform="translate(1020 286)">
+      <rect width="164" height="46" rx="14" fill="#ffffff"/>
+      <circle cx="24" cy="23" r="9" fill="#22d3ee"/>
+      <text x="42" y="28">Evidence fresh</text>
+    </g>
+  </g>
+</svg>
