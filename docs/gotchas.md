@@ -47,3 +47,9 @@ Verified fix: the repository's dependency-free validator passed, the YAML frontm
 Issue: one final metadata command was launched from the `outputs` directory while still prefixing repository paths with `outputs/`, so the files were not found.
 
 Verified fix: rerun the checks with repository paths relative to the actual current directory, then rebuild and test the archive.
+
+## GitHub publishing may require approved network access
+
+Issue: the first GitHub identity check produced no output inside the restricted network environment.
+
+Verified fix: rerun the narrow GitHub command with approved network access, verify the active account, create the repository as private, push `main`, and read back the private visibility setting.
