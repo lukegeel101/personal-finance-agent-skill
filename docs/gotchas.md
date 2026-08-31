@@ -89,3 +89,9 @@ Verified fix: confirm the documented entry point in the repository, run `scripts
 Issue: `gh-axi repo view` does not support the GitHub CLI `--json` flag, so the first remote visibility check was rejected.
 
 Verified fix: inspect the command help, run the supported repository view command without that flag, and confirm that the repository reports `visibility: private` and `branch: main`.
+
+## README heroes and social cards use different aspect ratios
+
+Issue: the wide 1200 by 360 README hero crops poorly when reused directly as GitHub's approximately 2:1 social preview.
+
+Verified fix: render a separate 1280 by 640 PNG from a converter-stable SVG copy, replace unsupported gradients with matching solid palette colors, preserve the full hero inside a matching background, and visually verify the result before upload.

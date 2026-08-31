@@ -10,7 +10,7 @@
 </div>
 
 Most finance tools give you more charts.
-This skill is designed to give you cleaner facts, visible uncertainty, and a short list of decisions that actually matter.
+This privacy-first Agentic Skill is designed to give you cleaner facts, visible uncertainty, and a short list of decisions that actually matter.
 
 It can pull together private, normalized bank, credit, investment, statement, and file data without hard-coding a specific institution.
 Then it cleans the evidence before calculating budgets, recurring charges, debt plans, savings goals, or net worth.
@@ -191,6 +191,11 @@ The canonical workflow is:
 8. Verify the write-back and close the workstream.
 
 See [references/control-center-workflow.md](references/control-center-workflow.md) for the full operating model.
+
+## Related Agentic Skill
+
+Want the same evidence-first, approval-gated approach for household shopping?
+See the [Grocery Shopping Agent](https://github.com/lukegeel101/grocery-shopping-agent-skill), which compares complete delivered baskets, current deals, coupons, and allowed substitutions without placing an order.
 
 ## Repository map
 
