@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "sample": true,
+  "accounts": [
+    {
+      "account_ref": "acct-checking-example",
+      "kind": "checking",
+      "currency": "USD",
+      "display_name": "Fictional checking",
+      "source_ref": "mock-csv-source"
+    },
+    {
+      "account_ref": "acct-credit-example",
+      "kind": "credit",
+      "currency": "USD",
+      "display_name": "Fictional credit card",
+      "source_ref": "mock-csv-source"
+    },
+    {
+      "account_ref": "acct-investment-example",
+      "kind": "investment",
+      "currency": "USD",
+      "display_name": "Fictional investment account",
+      "source_ref": "mock-csv-source"
+    }
+  ]
+}
+

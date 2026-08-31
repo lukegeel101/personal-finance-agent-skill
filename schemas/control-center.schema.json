@@ -1,0 +1,97 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/schemas/control-center.schema.json",
+  "title": "Personal Finance Control Center",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "updated_at",
+    "status_labels",
+    "active_workstreams",
+    "source_coverage",
+    "facts",
+    "open_questions",
+    "change_log"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "status_labels": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "CONFIRMED",
+          "CONNECTED_SNAPSHOT",
+          "USER_REPORTED",
+          "ESTIMATE",
+          "PLAN",
+          "PENDING_VERIFICATION"
+        ]
+      }
+    },
+    "active_workstreams": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "source_coverage": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "source_ref",
+          "requested_start",
+          "requested_end",
+          "actual_oldest",
+          "actual_newest",
+          "observed_at",
+          "freshness_note"
+        ]
+      }
+    },
+    "facts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "domain",
+          "statement",
+          "status",
+          "observed_at",
+          "source_ref",
+          "assumptions",
+          "remaining_uncertainty"
+        ]
+      }
+    },
+    "open_questions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "change_log": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "changed_at",
+          "task",
+          "source_ref",
+          "old_state",
+          "new_state",
+          "remaining_uncertainty"
+        ]
+      }
+    }
+  },
+  "additionalProperties": true
+}
+

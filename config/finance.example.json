@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "profile_label": "Fictional example household",
+  "base_currency": "USD",
+  "control_center_path": "data/sample/control-center.json",
+  "connectors": [
+    {
+      "type": "csv_file",
+      "source_ref": "mock-csv-source",
+      "read_only": true,
+      "accounts_path": "data/sample/accounts.json",
+      "transactions_path": "data/sample/transactions.csv"
+    }
+  ],
+  "analysis": {
+    "exclude_from_purchase_spending": [
+      "internal_transfer",
+      "credit_card_payment",
+      "refund",
+      "cashback",
+      "cash_withdrawal"
+    ],
+    "recurring_minimum_occurrences": 3,
+    "recurring_monthly_interval_min_days": 25,
+    "recurring_monthly_interval_max_days": 35
+  },
+  "budget": {
+    "exclude_internal_transfers": true,
+    "exclude_debt_principal": true,
+    "exclude_savings_contributions": true,
+    "category_caps": {
+      "housing": 1500.0,
+      "groceries": 400.0,
+      "utilities": 250.0,
+      "subscriptions": 100.0,
+      "transportation": 250.0,
+      "other": 300.0
+    }
+  },
+  "authority": {
+    "read_private_exports": true,
+    "write_local_control_center": true,
+    "connect_account": false,
+    "grant_scope": false,
+    "submit_payment": false,
+    "transfer_money": false,
+    "cancel_subscription": false,
+    "apply_for_credit": false,
+    "trade_asset": false
+  }
+}
+

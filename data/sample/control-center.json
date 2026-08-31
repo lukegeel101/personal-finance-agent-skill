@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "sample": true,
+  "profile_label": "Fictional example household",
+  "updated_at": "2026-08-31T12:00:00Z",
+  "status_labels": [
+    "CONFIRMED",
+    "CONNECTED_SNAPSHOT",
+    "USER_REPORTED",
+    "ESTIMATE",
+    "PLAN",
+    "PENDING_VERIFICATION"
+  ],
+  "active_workstreams": [],
+  "source_coverage": [
+    {
+      "source_ref": "mock-csv-source",
+      "requested_start": "2026-06-01",
+      "requested_end": "2026-08-31",
+      "actual_oldest": "2026-06-01",
+      "actual_newest": "2026-08-15",
+      "observed_at": "2026-08-31T12:00:00Z",
+      "freshness_note": "Fictional static export, not real-time data."
+    }
+  ],
+  "facts": [
+    {
+      "id": "fact-budget-example",
+      "domain": "budget",
+      "statement": "The fictional monthly grocery cap is 400 USD.",
+      "status": "PLAN",
+      "observed_at": "2026-08-31T12:00:00Z",
+      "source_ref": "example-user-plan",
+      "assumptions": "Debt principal, transfers, and savings contributions are outside this sample budget.",
+      "remaining_uncertainty": "None for the fictional example."
+    },
+    {
+      "id": "fact-subscription-example",
+      "domain": "subscriptions",
+      "statement": "A fictional streaming charge appears monthly in the sample data.",
+      "status": "CONNECTED_SNAPSHOT",
+      "observed_at": "2026-08-31T12:00:00Z",
+      "source_ref": "mock-csv-source",
+      "assumptions": "Three similar charges are treated as a recurring candidate.",
+      "remaining_uncertainty": "Merchant account status is not available in the sample export."
+    }
+  ],
+  "open_questions": [
+    "Should the fictional streaming candidate remain in the example budget?"
+  ],
+  "change_log": [
+    {
+      "changed_at": "2026-08-31T12:00:00Z",
+      "task": "public example initialization",
+      "source_ref": "repository-template",
+      "old_state": "No example Control Center.",
+      "new_state": "Created a fictional, connector-neutral Control Center.",
+      "remaining_uncertainty": "None for repository validation."
+    }
+  ]
+}
+

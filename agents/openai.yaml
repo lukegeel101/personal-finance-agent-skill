@@ -1,0 +1,7 @@
+interface:
+  display_name: "Personal Finance Control Center"
+  short_description: "Audit budgets, charges, debt, and goals safely"
+  default_prompt: "Use $personal-finance-agent-skill to audit my private normalized finance data without taking external actions."
+
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,24 @@
+# Private finance data
+config/finance.private.json
+data/private/
+data/imports/
+data/statements/
+data/control-center.private.json
+reports/private/
+*.ofx
+*.qfx
+*.qif
+*.pdf
+*.xlsx
+*.xls
+.env
+.env.*
+*.secret.json
+*.token.json
+
+# Runtime files
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.DS_Store
+

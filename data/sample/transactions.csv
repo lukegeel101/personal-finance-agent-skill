@@ -1,0 +1,18 @@
+transaction_ref,account_ref,posted_at,amount,currency,description,category,source_ref,evidence_status
+txn-20260601-income,acct-checking-example,2026-06-01,3200.00,USD,EXAMPLE PAYROLL,income,mock-csv-source,CONNECTED_SNAPSHOT
+txn-20260602-rent,acct-checking-example,2026-06-02,-1400.00,USD,EXAMPLE RENTAL HOUSING,housing,mock-csv-source,CONNECTED_SNAPSHOT
+txn-20260605-stream,acct-credit-example,2026-06-05,-14.99,USD,STREAMFLIX EXAMPLE,subscriptions,mock-csv-source,CONNECTED_SNAPSHOT
+txn-20260608-grocery,acct-credit-example,2026-06-08,-85.00,USD,EXAMPLE GROCERY MARKET,groceries,mock-csv-source,CONNECTED_SNAPSHOT
+txn-20260610-payment-out,acct-checking-example,2026-06-10,-400.00,USD,CREDIT CARD PAYMENT,credit_card_payment,mock-csv-source,CONNECTED_SNAPSHOT
+txn-20260610-payment-in,acct-credit-example,2026-06-10,400.00,USD,CREDIT CARD PAYMENT,credit_card_payment,mock-csv-source,CONNECTED_SNAPSHOT
+txn-20260701-income,acct-checking-example,2026-07-01,3200.00,USD,EXAMPLE PAYROLL,income,mock-csv-source,CONNECTED_SNAPSHOT
+txn-20260702-rent,acct-checking-example,2026-07-02,-1400.00,USD,EXAMPLE RENTAL HOUSING,housing,mock-csv-source,CONNECTED_SNAPSHOT
+txn-20260705-stream,acct-credit-example,2026-07-05,-14.99,USD,STREAMFLIX EXAMPLE,subscriptions,mock-csv-source,CONNECTED_SNAPSHOT
+txn-20260709-grocery,acct-credit-example,2026-07-09,-92.50,USD,EXAMPLE GROCERY MARKET,groceries,mock-csv-source,CONNECTED_SNAPSHOT
+txn-20260712-refund,acct-credit-example,2026-07-12,20.00,USD,EXAMPLE GROCERY REFUND,refund,mock-csv-source,CONNECTED_SNAPSHOT
+txn-20260801-income,acct-checking-example,2026-08-01,3200.00,USD,EXAMPLE PAYROLL,income,mock-csv-source,CONNECTED_SNAPSHOT
+txn-20260802-rent,acct-checking-example,2026-08-02,-1400.00,USD,EXAMPLE RENTAL HOUSING,housing,mock-csv-source,CONNECTED_SNAPSHOT
+txn-20260805-stream,acct-credit-example,2026-08-05,-14.99,USD,STREAMFLIX EXAMPLE,subscriptions,mock-csv-source,CONNECTED_SNAPSHOT
+txn-20260808-grocery,acct-credit-example,2026-08-08,-88.25,USD,EXAMPLE GROCERY MARKET,groceries,mock-csv-source,CONNECTED_SNAPSHOT
+txn-20260815-cashback,acct-credit-example,2026-08-15,10.00,USD,EXAMPLE CASHBACK,cashback,mock-csv-source,CONNECTED_SNAPSHOT
+
