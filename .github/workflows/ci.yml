@@ -26,6 +26,9 @@ jobs:
       - name: Validate public workspace
         run: python3 scripts/validate_workspace.py
 
+      - name: Verify committed sample evaluation
+        run: python3 scripts/evaluate_sample.py --check
+
       - name: Run mock audit
         run: python3 scripts/demo_audit.py
 

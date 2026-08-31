@@ -125,3 +125,21 @@ Verified fix: fetch and inspect the remote commit, retain its README copy and cr
 Issue: the installed GitHub CLI does not expose an `isLatest` field through `gh release view --json`, so the first release-verification query was rejected.
 
 Verified fix: query the supported tag, draft, prerelease, immutability, publication-time, target, and URL fields, then confirm that `v0.1.0` is a published non-draft release.
+
+## Keep cross-file patch context attached to the correct file
+
+Issue: the first combined CI and README patch placed README context under the workflow file, so patch verification rejected the full change without editing either file.
+
+Verified fix: use explicit file update headers for the workflow and README hunks, reapply the patch, and verify both diffs independently.
+
+## Derive recurring-candidate expectations from the configured thresholds
+
+Issue: the first committed evaluation expected two recurring candidates, but the fictional grocery-market series also satisfies the configured monthly interval and ten-percent amount-stability rules, producing three candidates.
+
+Verified fix: inspect the transaction dates and amounts, update the committed expectation and documentation to three, and rerun the evaluator and full test suite successfully.
+
+## Read GIF loop metadata from verbose identification output
+
+Issue: ImageMagick warned that the compact `%[iterations]` property was unknown while checking the generated demo GIF.
+
+Verified fix: inspect the GIF with `identify -verbose`, confirm all three frame delays, and verify that every frame reports `Iterations: 0` for continuous looping.

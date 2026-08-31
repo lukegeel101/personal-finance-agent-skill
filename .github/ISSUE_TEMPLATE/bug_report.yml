@@ -1,0 +1,28 @@
+name: Bug report
+description: Report incorrect behavior using fictional or fully sanitized evidence.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: Do not include balances, transactions, account identifiers, credentials, tax records, or personal financial history.
+  - type: textarea
+    id: behavior
+    attributes:
+      label: What happened?
+      description: Describe the observed behavior and the expected behavior.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction
+      description: Provide minimal steps and fictional sample data.
+    validations:
+      required: true
+  - type: textarea
+    id: verification
+    attributes:
+      label: Verification details
+      description: Include relevant validator or test output after removing sensitive information.

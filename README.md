@@ -78,6 +78,30 @@ External actions taken
 
 Those values come from the fictional sample data included in this repository.
 
+## Measured fictional demo
+
+<p align="center">
+  <img src="assets/demo.gif" alt="Animated finance-control evaluation using fictional data" width="900">
+</p>
+
+The committed evaluation imports sixteen fictional transactions, applies deterministic reconciliation rules, separates purchase spending from transfers and refunds, detects recurring candidates, and measures source coverage.
+
+| Reproducible metric | Result |
+| --- | ---: |
+| Raw fictional transactions | 16 |
+| Clean purchase-spending records | 9 |
+| Clean purchase spending | $4,510.72 |
+| Recurring candidates | 3 |
+| Requested source coverage | 92 days |
+| Actual source coverage | 76 days, or 82.61% |
+| External financial actions taken | 0 |
+
+```bash
+python3 scripts/evaluate_sample.py --check
+```
+
+See [docs/evaluation.md](docs/evaluation.md) for the fixture, method, and interpretation.
+
 ## What makes the evidence trustworthy
 
 Every important fact uses one of six explicit states:
@@ -206,13 +230,20 @@ See the [Grocery Shopping Agent](https://github.com/lukegeel101/grocery-shopping
 |-- agents/openai.yaml               ChatGPT/Codex metadata
 |-- assets/readme-hero.svg           README artwork
 |-- config/finance.example.json      Connector-neutral example
-|-- data/sample/                     Fictional finance data
+|-- data/                             Fictional finance and evaluation data
+|-- scripts/evaluate_sample.py       Reproducible finance benchmark
 |-- scripts/demo_audit.py            Mock audit demonstration
 |-- scripts/validate_workspace.py    Privacy and contract validator
 |-- src/finance_control/             Adapter and audit primitives
 |-- references/                      Evidence, workflow, and privacy rules
 `-- tests/                            Regression tests
 ```
+
+## Contributing
+
+Start with [CONTRIBUTING.md](CONTRIBUTING.md), review the [roadmap](ROADMAP.md), and use fictional data in every public issue or pull request.
+
+Security and privacy concerns should follow [SECURITY.md](SECURITY.md).
 
 ## Important limitation
 

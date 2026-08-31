@@ -1,0 +1,16 @@
+{
+  "actions_taken": 0,
+  "actual_coverage_days": 76,
+  "category_totals": {
+    "groceries": 265.75,
+    "housing": 4200.0,
+    "subscriptions": 44.97
+  },
+  "deduplicated_transactions": 16,
+  "purchase_spending_records": 9,
+  "purchase_spending_total": 4510.72,
+  "raw_transactions": 16,
+  "recurring_candidates": 3,
+  "requested_coverage_days": 92,
+  "source_coverage_percent": 82.61
+}
